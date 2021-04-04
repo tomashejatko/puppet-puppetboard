@@ -58,7 +58,7 @@
 class puppetboard (
   Stdlib::Absolutepath $apache_confd,
   String[1] $apache_service,
-  Pattern[/^3\.\d$/] $python_version,
+  String $python_version,
   Boolean $manage_selinux                                     = pick($facts['os.selinux.enabled'], false),
   String $user                                                = 'puppetboard',
   Optional[Stdlib::Absolutepath] $homedir                     = undef,
